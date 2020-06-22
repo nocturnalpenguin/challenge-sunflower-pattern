@@ -11,6 +11,10 @@ html, body {
     box-sizing: border-box;
 }
 
+.hide {
+    display: none !important;
+}
+
 #wrapper {
     display: flex;
     flex-direction: column;
@@ -71,7 +75,67 @@ html, body {
                 padding: 11px;
                 letter-spacing: 3px;
             }
+
+            .collapsible-description {
+                height: auto;
+                transition: height .3s ease, background .3s ease;
+                position: relative;
+                overflow: hidden;
+                padding-bottom: 15px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: linear-gradient(180deg, transparent, transparent);
+                }
+
+                &.collapsed {
+                    @media (min-width: 991px) {
+                        height: 40px;
+                        &::after {
+                            background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.9));
+                        }
+                        #description-collapse-toggle-btn {
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+
+                #description-collapse-toggle-btn {
+                    display: none;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    padding: 0;
+                    margin: 0;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%) rotate(180deg);
+                    z-index: 1;
+                    cursor: pointer;
+                    
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                        transition: transform .25s ease;
+                    }
+
+                    &:hover svg {
+                        transform: scale(1.35);
+                    }
+
+                    @media (min-width: 991px) {
+                        display: block;
+                    }
+                }
+            }
         }
+
 
         #controls {
             display: flex;

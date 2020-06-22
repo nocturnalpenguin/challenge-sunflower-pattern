@@ -28,7 +28,7 @@ class Sunflower extends CanvasBase {
     calculatePoints() {
         this.points = []
         this.divergenceRadian = this.divergenceAngle * Math.PI / 180
-        this.numberOfSeeds = ((this.canvas.width / 2) * 0.8) / (this.scale * this.seedDiameter) * 360
+        this.numberOfSeeds = ((this.canvas.width / 2) * 0.65) / (this.scale * this.seedDiameter) * 360
         const centerX = this.canvas.width / 2
         const centerY = this.canvas.height / 2
 
@@ -105,6 +105,9 @@ class Sunflower extends CanvasBase {
         }
         
         this.updateInputs([...rangeInputs, ...radioInputs])
+
+        const descriptionCollapseBtn = document.querySelector('#description-collapse-toggle-btn')
+        descriptionCollapseBtn.addEventListener('click', this.toggleDescriptionCollapse)
     }
 
     updateInputs(inputs) {
@@ -136,7 +139,18 @@ class Sunflower extends CanvasBase {
         this.restartAnimation()
     }
     
-    
+    toggleDescriptionCollapse(e) {
+        const controls = document.querySelector('#controls')
+        const description = document.querySelector('.collapsible-description')
+
+        if (description.classList.contains('collapsed')) {
+            description.classList.remove('collapsed')
+            controls.classList.add('hide')
+        } else {
+            description.classList.add('collapsed')
+            controls.classList.remove('hide')
+        }
+    }
 }
 
 // initialize
