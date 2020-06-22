@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunflower pattern</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="app.css" />
+</head>
+<body>
+    <div id="wrapper">
+        <canvas id="canvas"></canvas>
+        <div id="info">
+            <section id="description">
+                <h1>Sunflower pattern</h1>
+            </section>
+
+            <div id="controls">
+                <table>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="radio" name="useDots" value="1" />
+                                Dots
+                            </label>
+                        </td>
+                        <td>
+                            <label>
+                                <input type="radio" name="useDots" value="0" />
+                                Lines
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Divergence Angle
+                            (<small data-for="divergenceAngle"></small>)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="range" min="0" max="360" step="0.1" name="divergenceAngle" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Hue offset
+                            (<small data-for="hueOffset"></small>)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="range" min="0" max="360" step="1" name="hueOffset" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Zoom level
+                            (<small data-for="zoomLevel"></small>)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="range" min="1" max="20" step="0.01" name="zoomLevel" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="app.js"></script>
+</body>
+</html>
