@@ -13,6 +13,45 @@
         <div id="info">
             <section id="description">
                 <h1>Sunflower pattern</h1>
+                <p>
+                    In order to describe the pattern of seeds in a sunflower head,
+                    german physicist <b>Helmut Vogel</b> proposed a formula
+                </p>
+                <p class="formula">
+                    &phi; = n * 137.5
+                    <br />
+                    r = c * &Sqrt;n
+                </p>
+                <div class="collapsible-description collapsed">
+                    <p>where:</p>
+                    <ul>
+                        <li>
+                            <b>n</b> is the ordering number of a seed, counting outward from the center
+                        </li>
+                        <li>
+                            <b>&phi;</b> is the angle between a reference direction and the position vector of
+                            the <b>n<sup>th</sup></b> seed in a polar coordinate system originating at the center
+                        </li>
+                        <li>
+                            <b>137.5</b> is a divergence angle between the position vectors of any two successive seed.
+                            <br />
+                            this angle is also known as "<b>Golden Angle</b>"
+                        </li>
+                        <li>
+                            <b>r</b> is the distance between the center and the <b>n<sup>th</sup></b> seed,
+                            <br />
+                            given constant scaling parameter <b>c</b>
+                        </li>
+                    </ul>
+                    <button id="description-collapse-toggle-btn" type="button">
+                        <svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
+                            <polyline
+                                points='112 184 256 328 400 184'
+                                style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px'
+                            />
+                        </svg>
+                    </button>
+                </div>
             </section>
 
             <div id="controls">
