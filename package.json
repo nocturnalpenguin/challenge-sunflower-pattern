@@ -20,7 +20,7 @@
     "lodash.debounce": "^4.0.8"
   },
   "devDependencies": {
-    "resolve-url-loader": "^3.1.0",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
